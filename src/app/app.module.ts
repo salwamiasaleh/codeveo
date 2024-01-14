@@ -20,7 +20,7 @@ import { CardComponent } from './card/card.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
-import {MatIconModule} from '@angular/material/icon';
+
 const routes: Routes = [
  
   // other route configurations
@@ -44,12 +44,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
- 
-    AppRoutingModule,
+     AppRoutingModule,
     RouterModule,
     SlickCarouselModule,
-    MatIconModule, 
-    CarouselModule ,
+     CarouselModule ,
     BrowserAnimationsModule,
   ],
   providers: [],

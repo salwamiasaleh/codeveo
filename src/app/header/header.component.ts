@@ -1,7 +1,7 @@
 // header.component.ts
 import { Component,ViewChild,QueryList,ElementRef, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import {MatIconModule} from '@angular/material/icon';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

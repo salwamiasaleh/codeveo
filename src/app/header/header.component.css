@@ -246,3 +246,12 @@
     margin-top: 10px;
   }
 }
+
+.flex{
+  display: flex;
+
+}
+
+.d-inline{
+  display: inline-block;
+}

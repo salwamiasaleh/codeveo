@@ -1,13 +1,18 @@
 // header.component.ts
-import { Component } from '@angular/core';
+import { Component,ViewChild,QueryList,ElementRef, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
+import {MatIconModule} from '@angular/material/icon';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+
+
+  
+  
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit{
+ 
   constructor(){}
   customOptions: OwlOptions = {
     loop: true,
@@ -37,9 +42,14 @@ export class HeaderComponent {
 
     
   };
-
+  @ViewChild('button') button!: ElementRef;
   ngAfterViewInit(): void {
     this.onCarouselInitialized();
+    const buttonconst = this.button.nativeElement
+    buttonconst.addEventListener('click',()=>{
+      console.log('clicked')
+    })
+   
   }
 
   onCarouselInitialized(): void {
@@ -76,7 +86,9 @@ export class HeaderComponent {
     },
 
   ];
-  //start
 
-  //end
+
+
+
+
 }

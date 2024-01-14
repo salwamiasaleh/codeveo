@@ -4,7 +4,7 @@ import {
   ElementRef,
   QueryList,
   AfterViewInit,
-  } from '@angular/core';
+} from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
@@ -16,20 +16,20 @@ export class SideBarComponent implements AfterViewInit {
 
   private currentSelectedElement: HTMLElement | null = null;
 
-  constructor() {}
+  constructor() { }
 
   ngAfterViewInit() {
-this.navLinks.forEach((elementRef: ElementRef) => {
-  const nativeElement = elementRef.nativeElement;
-  nativeElement.addEventListener('click', () => {
-    if (this.currentSelectedElement) {
-      this.currentSelectedElement.classList.remove('nav-label');
-    }
-    // console.log(`Clicked on: ${nativeElement.textContent}`);
-    nativeElement.classList.add('nav-label');
-    this.currentSelectedElement = nativeElement;
-  });
-});
+    this.navLinks.forEach((elementRef: ElementRef) => {
+      const nativeElement = elementRef.nativeElement;
+      nativeElement.addEventListener('click', () => {
+        if (this.currentSelectedElement) {
+          this.currentSelectedElement.classList.remove('nav-label');
+        }
+        // console.log(`Clicked on: ${nativeElement.textContent}`);
+        nativeElement.classList.add('nav-label');
+        this.currentSelectedElement = nativeElement;
+      });
+    });
 
   }
 }

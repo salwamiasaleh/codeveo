@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 301.66 296.01">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .22px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-5 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linejoin: bevel;
+        stroke-width: .88px;
+      }
+
+      .cls-3 {
+        stroke: #fb5571;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+        fill-rule: evenodd;
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        stroke: #cb2494;
+        stroke-width: .44px;
+      }
+
+      .cls-5 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4.38px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1.63" y1="298.95" x2="1.86" y2="299.39" gradientTransform="translate(-1053.6 119614.43) scale(686.86 -399.39)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#fb5571"/>
+      <stop offset=".76" stop-color="#cb2494"/>
+      <stop offset="1" stop-color="#002c55"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_353" data-name="Group 353">
+    <path id="Path_128" data-name="Path 128" class="cls-2" d="m175.53,72.01h125.81L126.12,247.05H.31L175.53,72.01Z"/>
+    <path id="Path_133" data-name="Path 133" class="cls-6" d="m175.53,38.51h125.81L126.12,213.55H.31L175.53,38.51Z"/>
+    <path id="Path_130" data-name="Path 130" class="cls-4" d="m301.35.44v293.38"/>
+    <path id="Path_131" data-name="Path 131" class="cls-4" d="m175.56.44v125.59"/>
+    <g id="Icon_feather-arrow-up-left" data-name="Icon feather-arrow-up-left">
+      <path id="Path_29" data-name="Path 29" class="cls-5" d="m200.1,293.82l76.74-76.74"/>
+      <path id="Path_30" data-name="Path 30" class="cls-5" d="m200.1,217.08h76.74v76.74"/>
+    </g>
+    <path id="Path_132" data-name="Path 132" class="cls-1" d="m175.68.44H50.09"/>
+    <path id="Path_129" data-name="Path 129" class="cls-3" d="m175.53.44h125.81L126.12,175.48H.31L175.53.44Z"/>
+  </g>
+</svg>

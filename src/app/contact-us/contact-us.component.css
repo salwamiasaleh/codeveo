@@ -1,0 +1,107 @@
+.contuct-us {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.contuct-input {
+  height: 10%;
+  width: 90%;
+  border-radius: 15px;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 23px;
+  font-family: somar-regular;
+  color: var(--white);
+  background-color: #303238;
+  border: unset;
+}
+.contuct-text-area {
+  height: 30%;
+  width: 90%;
+  border-radius: 15px;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 23px;
+  font-family: somar-regular;
+  color: var(--white);
+  background-color: #303238;
+  border: unset;
+}
+form {
+  width: 80%;
+}
+.contuct-button {
+  height: 10%;
+  width: 95%;
+  border-radius: 15px;
+  background-color: var(--pink);
+  text-align: center;
+  font-size: 23px;
+  font-family: somar-regular;
+  color: var(--white);
+  border: unset;
+}
+.contact-frame {
+  width: 50%;
+  height: 800px;
+  margin: auto;
+  background-color: #27282D;
+  font-family: somar-regular;
+  border-radius: 25px;
+  opacity: 0.9;
+  direction: rtl;
+  margin-top: -66px;
+}
+.all-contact {
+  margin-top: 140px;
+}
+.contact-p {
+  width: 90%;
+  text-align: right;
+  font-size: 23px;
+  padding-right: 0px;
+  color: var(--white);
+  margin: auto;
+  margin-top: 83px;
+  padding-bottom: 15px;
+}
+.section-nine {
+  background-image: url("../../assets/Assets/050001.png"), url("../../assets/Assets/Background 1.svg");
+  background-position: 653px 20px, 300px -272px;
+  background-size: 45%, /* adjust as needed */ 100%;
+  background-repeat: no-repeat, no-repeat;
+  color: #fff;
+  margin-bottom: 75px;
+  direction: rtl;
+  padding-left: 10%;
+  padding-right: 15%;
+}
+.contact-frame textarea::placeholder{
+  color: white;
+}
+@media only screen and (max-width: 480px),
+only screen and (max-width: 768px),
+only screen and (max-width: 992px) {
+  .section-nine {
+      background-image: url("../../assets/Assets/050001.png"), url("../../assets/Assets/Background 1.svg");
+      background-position: top right, top right;
+      background-size: 100%, /* adjust as needed */ 100%;
+      background-repeat: no-repeat, no-repeat;
+      color: #fff;
+      margin-bottom: 75px;
+    }
+    .contact-frame{
+      height: unset;
+      width: 100%;
+    }
+    .all-contact {
+      margin-top: 80px;
+    }
+    .contact-label {
+      padding-bottom: 65px;
+    }
+      .contact-label{
+        padding-bottom: 86px;
+      }
+}

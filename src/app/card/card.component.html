@@ -1,0 +1,15 @@
+<div class="card" *ngFor="let card of cards">
+    <div class="image-card">
+      <!-- <img src="../assets/Archive/Group 3742.png" alt="" /> -->
+      <img src={{card.image}} alt="" />
+    </div>
+    <div class="description-container">
+      <span class="title-container">
+        <p class="title-one">{{card.titleone}}</p>
+        <p class="dividor">/</p>
+        <p class="title-two">{{card.titletwo}} </p>
+      </span>
+      <p class="subtitle">{{card.subtitle}}    </p>
+      <p class="description"> {{card.description}}</p>
+    </div>
+  </div>

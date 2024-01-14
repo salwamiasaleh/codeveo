@@ -1,0 +1,16 @@
+<div class="item" *ngFor="let accordion of accordionItems">
+  <div class="item-header" (click)="toggleSubtitle($event)">
+    <div class="item-number">
+      <p>{{ accordion.id }}.</p>
+    </div>
+    <div class="item-title">
+      <div class="title-and-arrow">
+        <p class="itm-title-inner">{{ accordion.title }}</p>
+        <img src="{{ accordion.img }}" class="rotate-arrow" alt="" />
+      </div>
+      <p class="itm-subtitle-inner hidden">
+        {{ accordion.description }}
+      </p>
+    </div>
+  </div>
+</div>

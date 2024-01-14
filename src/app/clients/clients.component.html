@@ -1,0 +1,18 @@
+<section class="section-seven animate__animated __animate__fadeIn animate__delay-1s" id="clients">
+  <div class="">
+    <div class="seven-intro">
+      <p class="seven-title">شركاء النجاح</p>
+      <p class="seven-subtitle">عملاؤنا</p>
+    </div>
+
+    <div class="cont  ">
+      <owl-carousel-o [options]="sectionseven">
+        <ng-container *ngFor="let slide of slidesStore">
+          <ng-template carouselSlide>
+            <img [src]="slide.src" />
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

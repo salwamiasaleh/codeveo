@@ -1,0 +1,25 @@
+.footer p{
+    color: white;
+    font-family: 'somar-regular';
+  }
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 480px),
+  only screen and (max-width: 768px),
+  only screen and (max-width: 992px) {
+  .footer{
+    margin-top: 225px;
+  }
+}
+
+
+
+
+
+
+
+
+

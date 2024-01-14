@@ -1,0 +1,35 @@
+<section class="section-six" id="projects ">
+  <div class="">
+    <div
+      class="six-intro animate__animated __animate__fadeIn animate__delay-1s"
+    >
+      <div>
+        <p class="six-title">فخرنا</p>
+        <p class="six-sub-title">أعمالنا</p>
+      </div>
+      <div class="link-containerone">
+        <p class="txt">عرض الكل</p>
+        <img
+          src="../assets/Arrrow Pink.svg/Arrrow Pink.svg"
+          class="pink-arrow-top"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="section-six-alt">
+      <div class="animate__animated __animate__fadeIn animate__delay-1s">
+        <app-card [cards]="allCardDetails"></app-card>
+      </div>
+    </div>
+
+    <div class="link-container link-container-bottom">
+      <img
+        src="../assets/Arrrow Pink.svg/Arrrow Pink.svg"
+        class="pink-arrow-bottom"
+        alt=""
+      />
+      <p class="txt" (click)="showMoreButton()">عرض الكل</p>
+    </div>
+  </div>
+</section>

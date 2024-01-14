@@ -1,0 +1,45 @@
+<div class="container">
+
+
+  <div class="content ">
+    <section class="section-one">
+      <div class="logo  animate__animated __animate__fadeIn animate__delay-1s"></div>
+    </section>
+    <section class="section-two" id="about">
+      <!-- header.component.html -->
+      <div class="header animate__animated __animate__fadeIn animate__delay-1s">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let item of carouselItems">
+            <ng-template carouselSlide [id]="item.id">
+              <div class="item">
+                <h1 class="header-label">{{ item.title }}</h1>
+                <h4 class="header-p">{{ item.details }}</h4>
+                <div class="arrow">
+                  <h4 class="header-p1">{{ item.orderNowText }}</h4>
+                  <img class="header-img" [src]="item.arrowImageUrl" />
+                </div>
+                <!-- salwa commented 1/8 -->
+                <!-- <hr class="header-hr" /> -->
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+      
+
+      <!-- </section>
+          <section class="section-three"> -->
+      <div class="about  animate__animated __animate__fadeIn animate__delay-1s">
+        <h4 class="about-p">من نحن</h4>
+        <h1 class="about-label">رفع الإبداع الرقمي</h1>
+
+        <h4 class="about-p1">
+          كودڤيو بفريق موهوب والتزام بالإبداع، تختص بمجموعة واسعة من الخدمات
+          الرقمية من تطوير مواقع الويب والتطبيقات إلى تصميم تجربة المستخدم/واجهة
+          المستخدم (UX/UI) بالإضافة إلى تطوير العلامة التجارية.
+        </h4>
+        <div class="about-img"></div>
+      </div>
+    </section>
+  </div>
+</div>

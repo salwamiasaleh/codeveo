@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 302.16 302.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fb5571;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-arrow-up-left" data-name="Icon feather-arrow-up-left">
+    <g id="Path_29" data-name="Path 29">
+      <path class="cls-1" d="m279.42,302.16c-5.82,0-11.64-2.22-16.08-6.66L6.66,38.82C-2.22,29.94-2.22,15.54,6.66,6.66,15.54-2.22,29.94-2.22,38.82,6.66l256.68,256.68c8.88,8.88,8.88,23.28,0,32.16-4.44,4.44-10.26,6.66-16.08,6.66Z"/>
+    </g>
+    <g id="Path_30" data-name="Path 30">
+      <path class="cls-1" d="m22.74,302.16c-12.56,0-22.74-10.18-22.74-22.74V22.74C0,10.18,10.18,0,22.74,0h256.68c12.56,0,22.74,10.18,22.74,22.74s-10.18,22.74-22.74,22.74H45.48v233.94c0,12.56-10.18,22.74-22.74,22.74Z"/>
+    </g>
+  </g>
+</svg>

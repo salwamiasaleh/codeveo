@@ -5,12 +5,26 @@
   </div>
   <div class="accordion-container animate__animated __animate__fadeIn animate__delay-1s">
     <div class="introduction">
-      <p class="title">باقات متعددة</p>
-      <p class="fourth-subtitle">خدمات كودڤيو</p>
-      <p class="fourth-paragraph">
+   <div class="flex">
+    <p class="title" *ngIf="title">باقات متعددة</p>
+    <input type="text" [(ngModel)]="servicesinputtitle" *ngIf="showinputtitle">
+    <button (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+   </div>
+     <div class="flex">
+      <p class="fourth-subtitle"  *ngIf="subtitle">خدمات كودڤيو</p>
+      <input type="text" [(ngModel)]="serviceinputsubtitle" *ngIf="showinputsubtitle">
+      <button #buttonsubtitle (click)="changeSubTitle()"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
+
+     </div>
+     <div class="flex">
+      <p class="fourth-paragraph"  *ngIf="paragraph" >
         تطوير المواقع والتطبيقات تصميم تجربة المستخدم/واجهة المستخدم (UX/UI)
         بالإضافة إلى تطوير العلامة التجارية.
       </p>
+      <textarea name="" id="" cols="30" rows="10" *ngIf="showinputparagraph" [(ngModel)]="serviceinputparagraph"></textarea>
+      <button  (click)="changeParagraph()"> <mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+  
+     </div>
     </div>
 
     <div class="accordion">

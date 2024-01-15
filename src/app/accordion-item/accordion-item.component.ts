@@ -36,6 +36,49 @@ export class AccordionItemComponent {
 
     arrowElement?.classList.toggle('rotate');
   }
+  accordioninputtitle: string = '';
+  ButtonTexttitle: string = 'edit';
+  showinputtitle = false
+  title = true
+  // for title end
 
 
+ 
+  changetitle() {
+    if (!this.showinputtitle) {
+    
+      this.showinputtitle = true;
+      this.title = false;
+      this.ButtonTexttitle = 'save';
+    } else {
+    
+      if (this.accordioninputtitle.length !== 0) {
+        console.log(this.accordioninputtitle);
+      }
+      this.ButtonTexttitle = 'edit';
+      this.showinputtitle = false;
+      this.title = true;
+    }
+  }
+  accordioninputparagraph: string = '';
+  ButtonTextparagraph: string = 'edit';
+  showinputparagraph = false
+  paragraph = true;
+  //for paragraph end
+
+  changeParagraph() {
+    if (!this.showinputparagraph) {
+      this.showinputparagraph = true;
+      this.paragraph = false;
+      this.ButtonTextparagraph = 'save';
+    } else {
+      if (this.accordioninputparagraph.length !== 0) {
+        console.log(this.accordioninputparagraph);
+      }
+      this.ButtonTextparagraph = 'edit';
+      this.showinputparagraph = false;  
+      this.paragraph = true;  
+    }
+  }
+  
 }

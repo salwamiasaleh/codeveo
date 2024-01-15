@@ -6,14 +6,30 @@ class="section-five "
     <div class="composition  animate__animated __animate__fadeIn animate__delay-1s">
       <div class="text">
         <img src="../assets/Assets/rocket-lunch.png" class="rocket-image" alt="" />
-        <p class="five-title">ترى جاهزين</p>
+        <div class="flex">
+          <p class="five-title" *ngIf="title">ترى جاهزين</p>
+          <input type="text" [(ngModel)]="bannerinputtitle" *ngIf="showinputtitle">
+          <button #buttontitle (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+      
+        
+        </div>
         <div class="image-section">
           <img src="../assets/Assets/rocket-lunch.png" alt="" />
-          <p class="five-subtitle">لاستشارتك المجانية!</p>
+     <div class="flex">
+      <p class="five-subtitle" *ngIf="subtitle">لاستشارتك المجانية!</p>
+      <input type="text" [(ngModel)]="bannerinputsubtitle" *ngIf="showinputsubtitle">
+      <button #buttonsubtitle (click)="changeSubTitle()"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
+  
+     </div>
         </div>
         <div>
           <span class="link">
-            <p class="link-title">اطلب الآن</p>
+        <div class="flex">
+          <p class="link-title"  *ngIf="paragraph" >اطلب الآن</p>
+          <textarea name="" id="" cols="30" rows="10" *ngIf="showinputparagraph" [(ngModel)]="bannerinputparagraph"></textarea>
+          <button #buttonParagraph (click)="changeParagraph()"> <mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+    
+        </div>
             <img src="../assets/Assets/Arrow.svg" alt="" />
           </span>
         </div>

@@ -32,17 +32,22 @@
           <section class="section-three"> -->
       <div class="about  animate__animated __animate__fadeIn animate__delay-1s">
         <div class="">
-          <button class="d-inline"  >edit</button>
-          <input type="text">
-          <h4 class="about-p d-inline">من نحن</h4> 
+          <button class="d-inline "  (click)="changeTitle()"><mat-icon>{{buttontxttitle}}</mat-icon></button>
+          <input type="text" *ngIf="showinputtitle" [(ngModel)]="headerinputtitle" [(ngModel)]="headerinputsubtitle">
+          <h4 class="about-p d-inline" *ngIf="title">من نحن</h4> 
         </div>
-        <h1 class="about-label">رفع الإبداع الرقمي</h1>
-
-        <h4 class="about-p1">
+       <div>
+         <button class=" d-inline" (click)="changeSubTitle()" ><mat-icon>{{buttontxtsubtitle}}</mat-icon></button>
+        <h1 class="about-label d-inline" *ngIf="subtitle">رفع الإبداع الرقمي</h1>
+        <input type="text" [(ngModel)]="headerinputsubtitle" *ngIf="showinputsubtitle">
+       </div>
+       <button (click)="changeParagraph()"> <mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+        <h4 class="about-p1" *ngIf="paragraph">
           كودڤيو بفريق موهوب والتزام بالإبداع، تختص بمجموعة واسعة من الخدمات
           الرقمية من تطوير مواقع الويب والتطبيقات إلى تصميم تجربة المستخدم/واجهة
           المستخدم (UX/UI) بالإضافة إلى تطوير العلامة التجارية.
         </h4>
+        <textarea name="" id="" cols="30" rows="10" *ngIf="showinputparagraph" [(ngModel)]="headerinputparagraph"></textarea>
         <div class="about-img"></div>
       </div>
     </section>

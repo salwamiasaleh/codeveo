@@ -14,10 +14,12 @@
       </div>
     </div>
     <div class="third-second-part">
-      <p>
+      <p *ngIf="paragraph" >
         نسعى في كودڤيو لتحقيق مكانة رائدة في عالم الإبداع الرقمي من خلال تقديم
         تجارب رقمية استثنائية تلهم وتحقق النجاح لعملائنا.
       </p>
+      <textarea name="" id="" cols="30" rows="10" *ngIf="showinputparagraph" [(ngModel)]="visioninputparagraph"></textarea>
+      <button #buttonParagraph (click)="changeParagraph()"> <mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
     </div>
   </div>
 </section>

@@ -16,3 +16,7 @@ button{
   vertical-align: middle;
   white-space: nowrap;
 }
+
+textarea{
+  margin-right: 100px;
+}

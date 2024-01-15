@@ -5,12 +5,22 @@
     </div>
     <div class="item-title">
       <div class="title-and-arrow">
-        <p class="itm-title-inner">{{ accordion.title }}</p>
+      <div class="flex">  <p class="itm-title-inner" *ngIf="title">{{ accordion.title }}</p>
+        <input type="text" [(ngModel)]="accordioninputtitle" *ngIf="showinputtitle">
+        <button (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+    
+      </div>
         <img src="{{ accordion.img }}" class="rotate-arrow" alt="" />
       </div>
-      <p class="itm-subtitle-inner hidden">
+     <div class="itm-subtitle-inner hidden">
+      <p class=""  *ngIf="paragraph">
         {{ accordion.description }}
-      </p>
+     
+         </p>
+         <textarea *ngIf="showinputparagraph" [(ngModel)]="accordioninputparagraph" class=" " id="" cols="30" rows="10"></textarea>
+         <button (click)="changeParagraph()"><mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+       
+     </div>
     </div>
   </div>
 </div>

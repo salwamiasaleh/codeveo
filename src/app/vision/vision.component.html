@@ -1,9 +1,17 @@
 <section class="section-four  animate__animated __animate__fadeIn animate__delay-1s">
   <div class="section-four-container">
     <div class="third-first-part">
-      <p class="title">كودڤيو</p>
-      <button><i class="fa-solid fa-house width"></i></button>
-      <p class="sub-title">رؤيتنا</p>
+      <div class="flex">
+        <p class="title" *ngIf="title">كودڤيو</p>
+        <input type="text" [(ngModel)]="visioninputtitle" *ngIf="showinputtitle">
+        <button #buttontitle (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+        <!-- <button #savebutton *ngIf="savebuttonif"><mat-icon #maticon>save</mat-icon></button> -->
+      </div>
+      <div class="flex">
+        <p class="sub-title" *ngIf="subtitle">رؤيتنا</p>
+        <input type="text" [(ngModel)]="visioninputsubtitle" *ngIf="showinputsubtitle">
+        <button #buttonsubtitle (click)="changeSubTitle()"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
+      </div>
     </div>
     <div class="third-second-part">
       <p>

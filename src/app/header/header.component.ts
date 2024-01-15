@@ -1,19 +1,17 @@
 // header.component.ts
-import { Component,ViewChild,QueryList,ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, QueryList, ElementRef, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.css']})
 
 
-  
-  
-})
-export class HeaderComponent implements AfterViewInit{
- 
-  constructor(){}
+
+export class HeaderComponent implements AfterViewInit {
+
+  constructor() { }
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -21,7 +19,7 @@ export class HeaderComponent implements AfterViewInit{
     pullDrag: true,
     dots: true,
     navSpeed: 700,
-    rtl:true,
+    rtl: true,
     // navText: ['next', 'previous'],
     responsive: {
       0: {
@@ -34,22 +32,19 @@ export class HeaderComponent implements AfterViewInit{
         items: 1
       },
       940: {
-        items: 1  
+        items: 1
       }
     },
     nav: false,
 
 
-    
+
   };
-  @ViewChild('button') button!: ElementRef;
-  ngAfterViewInit(): void {
+
+   ngAfterViewInit(): void {
     this.onCarouselInitialized();
-    const buttonconst = this.button.nativeElement
-    buttonconst.addEventListener('click',()=>{
-      console.log('clicked')
-    })
-   
+  
+
   }
 
   onCarouselInitialized(): void {
@@ -64,21 +59,21 @@ export class HeaderComponent implements AfterViewInit{
   }
   carouselItems = [
     {
-      id:"1",
+      id: "1",
       title: 'العنوان الرئيسي هنا',
       details: 'التفاصيل تكتب هنا',
       orderNowText: 'اطلب الآن',
       arrowImageUrl: '../../assets/Assets/Arrow.svg'
     },
     {
-      id:"2",
+      id: "2",
       title: 'العنوان الرئيسي هنا',
       details: 'التفاصيل تكتب هنا',
       orderNowText: 'اطلب الآن',
       arrowImageUrl: '../../assets/Assets/Arrow.svg'
     },
     {
-      id:"3",
+      id: "3",
       title: 'العنوان الرئيسي هنا',
       details: 'التفاصيل تكتب هنا',
       orderNowText: 'اطلب الآن',

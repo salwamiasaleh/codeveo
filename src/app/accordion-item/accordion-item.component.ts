@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -13,22 +14,21 @@ export class AccordionItemComponent {
     const subtitle = parentItem?.querySelector<HTMLElement>(
       '.itm-subtitle-inner'
     );
-    const arrowElement =
+       const arrowElement =
       parentItem?.querySelector<HTMLElement>('.rotate-arrow');
-
-    const allItems = document.querySelectorAll<HTMLElement>('.item');
-    allItems.forEach((item) => {
-      if (item !== parentItem) {
-        const otherSubtitle = item.querySelector<HTMLElement>(
-          '.itm-subtitle-inner'
-        );
-        const otherArrow = item.querySelector<HTMLElement>('.rotate-arrow');
-        if (otherSubtitle && !otherSubtitle.classList.contains('hidden')) {
-          otherSubtitle.classList.add('hidden');
-          otherArrow?.classList.remove('rotate');
+      const allItems = document.querySelectorAll<HTMLElement>('.item');
+      allItems.forEach((item) => {
+        if (item !== parentItem) {
+          const otherSubtitle = item.querySelector<HTMLElement>(
+            '.itm-subtitle-inner'
+          );
+          const otherArrow = item.querySelector<HTMLElement>('.rotate-arrow');
+          if (otherSubtitle && !otherSubtitle.classList.contains('hidden')) {
+            otherSubtitle.classList.add('hidden');
+            otherArrow?.classList.remove('rotate');
+          }
         }
-      }
-    });
+      });
 
     if (subtitle) {
       subtitle.classList.toggle('hidden');
@@ -39,25 +39,26 @@ export class AccordionItemComponent {
   accordioninputtitle: string = '';
   ButtonTexttitle: string = 'edit';
   showinputtitle = false
-  title = true
+  showtitle = true
   // for title end
 
 
  
-  changetitle() {
-    if (!this.showinputtitle) {
+  changetitle(index:number) {
+    if (!this.accordionItems[index].showinputtitle) {
     
-      this.showinputtitle = true;
-      this.title = false;
+      this.accordionItems[index].showinputtitle = true;
+      this.accordionItems[index].showtitle = false;
       this.ButtonTexttitle = 'save';
     } else {
     
-      if (this.accordioninputtitle.length !== 0) {
+      if (this.accordionItems[index].accordioninputtitle.length !== 0) {
         console.log(this.accordioninputtitle);
+        this.accordionItems[index].title=this.accordionItems[index].accordioninputtitle
       }
       this.ButtonTexttitle = 'edit';
-      this.showinputtitle = false;
-      this.title = true;
+      this.accordionItems[index].showinputtitle = false;
+      this.accordionItems[index].showtitle = true;
     }
   }
   accordioninputparagraph: string = '';
@@ -66,18 +67,19 @@ export class AccordionItemComponent {
   paragraph = true;
   //for paragraph end
 
-  changeParagraph() {
-    if (!this.showinputparagraph) {
-      this.showinputparagraph = true;
-      this.paragraph = false;
+  changeParagraph(index:number) {
+    if (!this.accordionItems[index].showinputparagraph) {
+      this.accordionItems[index].showinputparagraph = true;
+      this.accordionItems[index].paragraph = false;
       this.ButtonTextparagraph = 'save';
     } else {
-      if (this.accordioninputparagraph.length !== 0) {
+      if (this.accordionItems[index].accordioninputparagraph.length !== 0) {
         console.log(this.accordioninputparagraph);
+        this.accordionItems[index].description=this.accordionItems[index].accordioninputparagraph;
       }
       this.ButtonTextparagraph = 'edit';
-      this.showinputparagraph = false;  
-      this.paragraph = true;  
+      this.accordionItems[index].showinputparagraph = false;  
+      this.accordionItems[index].paragraph = true;  
     }
   }
   

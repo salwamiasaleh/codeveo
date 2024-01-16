@@ -1,26 +1,31 @@
-<div class="item" *ngFor="let accordion of accordionItems">
+<div class="item" *ngFor="let accordion of accordionItems; let i =index;">
   <div class="item-header" (click)="toggleSubtitle($event)">
     <div class="item-number">
       <p>{{ accordion.id }}.</p>
     </div>
     <div class="item-title">
       <div class="title-and-arrow">
-      <div class="flex">  <p class="itm-title-inner" *ngIf="title">{{ accordion.title }}</p>
-        <input type="text" [(ngModel)]="accordioninputtitle" *ngIf="showinputtitle">
-        <button (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
-    
-      </div>
+        <div class="flex">
+          <p class="itm-title-inner" *ngIf="accordion.showtitle===true || accordion.showtitle===undefined">{{ accordion.title }}</p>
+          <input type="text" [(ngModel)]="accordion.accordioninputtitle" *ngIf="accordion.showinputtitle">
+          <button (click)="changetitle(i)"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+
+        </div>
         <img src="{{ accordion.img }}" class="rotate-arrow" alt="" />
       </div>
-     <div class="itm-subtitle-inner hidden">
-      <p class=""  *ngIf="paragraph">
-        {{ accordion.description }}
-     
-         </p>
-         <textarea *ngIf="showinputparagraph" [(ngModel)]="accordioninputparagraph" class=" " id="" cols="30" rows="10"></textarea>
-         <button (click)="changeParagraph()"><mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
-       
-     </div>
+      <div class="itm-subtitle-inner hidden">
+        <p class="" *ngIf="accordion.paragraph===true || accordion.paragraph===undefined">
+          {{ accordion.description }}
+
+        </p>
+
+
+      </div>
+      <div class="edit-items ">
+        <textarea *ngIf="accordion.showinputparagraph" [(ngModel)]="accordion.accordioninputparagraph" class=" " id="" cols="30"
+          rows="10"></textarea>
+        <button (click)="changeParagraph(i)"><mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+      </div>
     </div>
   </div>
 </div>

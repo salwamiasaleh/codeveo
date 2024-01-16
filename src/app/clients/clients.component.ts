@@ -44,4 +44,50 @@ export class ClientsComponent {
     },
     nav: true
   }
+
+  clientsinputtitle: string = '';
+  ButtonTexttitle: string = 'edit';
+  showinputtitle = false
+  title = true
+  // for title end
+
+
+  
+  changetitle() {
+    if (!this.showinputtitle) {
+    
+      this.showinputtitle = true;
+      this.title = false;
+      this.ButtonTexttitle = 'save';
+    } else {
+    
+      if (this.clientsinputtitle.length !== 0) {
+        console.log(this.clientsinputtitle);
+      }
+      this.ButtonTexttitle = 'edit';
+      this.showinputtitle = false;
+      this.title = true;
+    }
+  }
+  clientsinputsubtitle: string = '';
+  ButtonTextsubtitle: string = 'edit';
+  showinputsubtitle = false
+  subtitle = true
+  //for title end
+  changeSubTitle() {
+    if (!this.showinputsubtitle) {
+    
+      this.showinputsubtitle = true;
+      this.subtitle = false;
+      this.ButtonTextsubtitle = 'save';
+    } else {
+      
+      if (this.clientsinputsubtitle.length !== 0) {
+        console.log(this.clientsinputsubtitle);
+      }
+      this.ButtonTextsubtitle = 'edit';
+      this.showinputsubtitle = false;
+      this.subtitle = true;
+    }
+  }
 }

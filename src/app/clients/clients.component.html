@@ -1,11 +1,21 @@
 <section class="section-seven animate__animated __animate__fadeIn animate__delay-1s" id="clients">
   <div class="">
     <div class="seven-intro">
-      <p class="seven-title">شركاء النجاح</p>
-      <p class="seven-subtitle">عملاؤنا</p>
+    <div class="flex">
+      <p class="seven-title" *ngIf="title">شركاء النجاح</p>
+      <input type="text" [(ngModel)]="clientsinputtitle" *ngIf="showinputtitle">
+      <button  (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+       
+    </div>
+  <div class="flex">
+    <p class="seven-subtitle"  *ngIf="subtitle">عملاؤنا</p>
+    <input type="text" [(ngModel)]="clientsinputsubtitle" *ngIf="showinputsubtitle">
+    <button #buttonsubtitle (click)="changeSubTitle()"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
+
+  </div>
     </div>
 
-    <div class="cont  ">
+    <div class="cont">
       <owl-carousel-o [options]="sectionseven">
         <ng-container *ngFor="let slide of slidesStore">
           <ng-template carouselSlide>

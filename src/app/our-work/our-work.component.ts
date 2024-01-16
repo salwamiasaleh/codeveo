@@ -10,36 +10,41 @@ export class OurWorkComponent implements OnInit{
 ngOnInit(): void {
 
 }
-  CardDetails: any = [
-    {
-      image: '../assets/Archive/Group 3742.png',
-      titleone: 'هوية بصرية',
-      titletwo: ' تطوير المواقع',
-      subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
-      description: 'ديسمبر 2023',
-    },
-    {
-      image: '../assets/Archive/Group 3742.png',
-      titleone: 'هوية بصرية',
-      titletwo: ' تطوير المواقع',
-      subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
-      description: 'ديسمبر 2023',
-    },
-    {
-      image: '../assets/Archive/Group 3742.png',
-      titleone: 'هوية بصرية',
-      titletwo: ' تطوير المواقع',
-      subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
-      description: 'ديسمبر 2023',
-    },
-    {
-      image: '../assets/Archive/Group 3742.png',
-      titleone: 'هوية بصرية',
-      titletwo: ' تطوير المواقع',
-      subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
-      description: 'ديسمبر 2023',
-    },
-  ];
+CardDetails: any = [
+  {
+    image: '../assets/Archive/Group 3742.png',
+    titleone: 'هوية بصرية',
+    titletwo: ' تطوير المواقع',
+    subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
+    description: 'ديسمبر 2023',
+ 
+    
+  },
+  {
+    image: '../assets/Archive/Group 3742.png',
+    titleone: 'هوية بصرية',
+    titletwo: ' تطوير المواقع',
+    subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
+    description: 'ديسمبر 2023',
+
+  },
+  {
+    image: '../assets/Archive/Group 3742.png',
+    titleone: 'هوية بصرية',
+    titletwo: ' تطوير المواقع',
+    subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
+    description: 'ديسمبر 2023',
+  
+  },
+  {
+    image: '../assets/Archive/Group 3742.png',
+    titleone: 'هوية بصرية',
+    titletwo: ' تطوير المواقع',
+    subtitle: 'هوية بصرية وموقع سيلزيو الخطير',
+    description: 'ديسمبر 2023',
+
+  },
+];
  
   allCardDetails:any=[]
  
@@ -61,6 +66,53 @@ ngOnInit(): void {
   showMoreButton(){
     this.allCardDetails = this.CardDetails
   }
+  workinputtitle: string = '';
+  ButtonTexttitle: string = 'edit';
+  showinputtitle = false
+  title = true
+  // for title end
 
+
+  ngAfterViewInit(): void {
+
+  }
+  changetitle() {
+    if (!this.showinputtitle) {
+    
+      this.showinputtitle = true;
+      this.title = false;
+      this.ButtonTexttitle = 'save';
+    } else {
+    
+      if (this.workinputtitle.length !== 0) {
+        console.log(this.workinputtitle);
+      }
+      this.ButtonTexttitle = 'edit';
+      this.showinputtitle = false;
+      this.title = true;
+    }
+  }
+  workinputsubtitle: string = '';
+  ButtonTextsubtitle: string = 'edit';
+  showinputsubtitle = false
+  subtitle = true
+  //for title end
+  changeSubTitle() {
+    if (!this.showinputsubtitle) {
+    
+      this.showinputsubtitle = true;
+      this.subtitle = false;
+      this.ButtonTextsubtitle = 'save';
+    } else {
+      
+      if (this.workinputsubtitle.length !== 0) {
+        console.log(this.workinputsubtitle);
+      }
+      this.ButtonTextsubtitle = 'edit';
+      this.showinputsubtitle = false;
+      this.subtitle = true;
+    }
+  }
+  
 
 }

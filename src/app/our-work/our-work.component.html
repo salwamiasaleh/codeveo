@@ -4,8 +4,18 @@
       class="six-intro animate__animated __animate__fadeIn animate__delay-1s"
     >
       <div>
-        <p class="six-title">فخرنا</p>
-        <p class="six-sub-title">أعمالنا</p>
+        <div class="flex">
+          <p class="six-title"  *ngIf="title">فخرنا</p>
+          <input type="text" [(ngModel)]="workinputtitle" *ngIf="showinputtitle">
+          <button #buttontitle (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+        
+        </div>
+      <div class="flex">
+        <p class="six-sub-title" *ngIf="subtitle">أعمالنا</p>
+        <input type="text" [(ngModel)]="workinputsubtitle" *ngIf="showinputsubtitle">
+        <button #buttonsubtitle (click)="changeSubTitle()"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
+    
+      </div>
       </div>
       <div class="link-containerone">
         <p class="txt">عرض الكل</p>

@@ -1,15 +1,38 @@
-<div class="card" *ngFor="let card of cards">
-    <div class="image-card">
-      <!-- <img src="../assets/Archive/Group 3742.png" alt="" /> -->
-      <img src={{card.image}} alt="" />
+<div class="card" *ngFor="let card of cards; let i = index">
+  <div class="image-card">
+    <!-- <img src="../assets/Archive/Group 3742.png" alt="" /> -->
+    <img src={{card.image}} alt="" />
+  </div>
+  <div class="description-container">
+    <span class="title-container">
+      <div class="flex">
+        <p class="title-one" *ngIf="card.showtitleone === true || card.showtitleone === undefined">{{card.titleone}}</p>
+        <input type="text" [(ngModel)]="card.cardinputtitle" *ngIf="card.showinputtitle">
+        <button  (click)="changetitle(i)" ><mat-icon>
+          {{ButtonTexttitle }}
+        </mat-icon></button>
+
+      </div>
+      <p class="dividor">/</p>
+      <div>
+        <div class="flex">
+          <p class="title-two" *ngIf="card.showtitletwo===true || card.showtitletwo ===undefined">{{card.titletwo}} </p>
+          <input type="text" [(ngModel)]="card.cardinputtitletwo" *ngIf="card.showinputtitletwo">
+          <button (click)="changetitletwo(i)"><mat-icon>{{ButtonTexttitletwo}}</mat-icon></button>
+        </div>
+      </div>
+    </span>
+    <div class="flex">
+      <p class="subtitle" *ngIf="card.showsubtitle===true || card.showsubtitle===undefined">{{card.subtitle}} </p>
+      <input type="text" [(ngModel)]="card.cardinputsubtitle" *ngIf="card.showinputsubtitle">
+      <button  (click)="changeSubTitle(i)"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
     </div>
-    <div class="description-container">
-      <span class="title-container">
-        <p class="title-one">{{card.titleone}}</p>
-        <p class="dividor">/</p>
-        <p class="title-two">{{card.titletwo}} </p>
-      </span>
-      <p class="subtitle">{{card.subtitle}}    </p>
-      <p class="description"> {{card.description}}</p>
+    <div class="flex">
+      <p class="description" *ngIf="card.showparagraph===true || card.showparagraph===undefined"> {{card.description}}</p>
+      <textarea name="" id="" cols="30" rows="10" *ngIf="card.showinputparagraph"
+        [(ngModel)]="card.cardinputparagraph"></textarea>
+      <button  (click)="changeParagraph(i)"> <mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+
     </div>
   </div>
+</div>

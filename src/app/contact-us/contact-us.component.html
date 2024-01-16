@@ -4,18 +4,32 @@
     >
    <div class="all-contact">
     <div class="contact-label">
-      <p class="seven-title">كودڤيو </p>
-      <p class="seven-subtitle">اتصل بنا</p>
+      <div class="flex" >
+        <p class="seven-title" *ngIf="title">كودڤيو </p>
+        <input type="text" [(ngModel)]="contactinputtitle" *ngIf="showinputtitle">
+        <button #buttontitle (click)="changetitle()"><mat-icon>{{ButtonTexttitle}}</mat-icon></button>
+       
+      </div>
+   <div class="flex">
+    <p class="seven-subtitle"  *ngIf="subtitle">اتصل بنا</p>
+    <input type="text" [(ngModel)]="contactinputsubtitle" *ngIf="showinputsubtitle">
+        <button  (click)="changeSubTitle()"><mat-icon>{{ButtonTextsubtitle}}</mat-icon></button>
+      </div>
     </div>
     
       <div class="contact-frame  ">
       
         <div class="contuct-us">
           <form action="/action_page.php">
-            <p class="contact-p">
-              بعد ارسال الرسالة، سيتم التواصل بكم خلال 48 ساعة كحد أقصى على
-              رقمكم المسجل في الرسالة
-            </p>
+            <div class="flex">
+              <p class="contact-p" *ngIf="paragraph">
+                بعد ارسال الرسالة، سيتم التواصل بكم خلال 48 ساعة كحد أقصى على
+                رقمكم المسجل في الرسالة
+              </p>
+              <textarea name="" id="" cols="30" rows="10" *ngIf="showinputparagraph" [(ngModel)]="contactinputparagraph" name="sal"></textarea>
+              <button (click)="changeParagraph()"> <mat-icon>{{ButtonTextparagraph}}</mat-icon></button>
+          
+            </div>
             <input
               class="contuct-input"
               type="text"

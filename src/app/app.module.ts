@@ -22,6 +22,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
  
@@ -31,6 +32,7 @@ const routes: Routes = [
 
   
   declarations: [
+  
     AppComponent,
     HeaderComponent,
     SideBarComponent,

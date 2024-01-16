@@ -1,12 +1,14 @@
 import { Component, ViewChild, AfterViewInit, ElementRef, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { EditComponent } from '../../app/edit/edit.component';
+
 @Component({
   selector: 'app-vision',
   templateUrl: './vision.component.html',
   styleUrls: ['./vision.component.css'],
 
 })
-export class VisionComponent implements AfterViewInit {
+export class VisionComponent{
 
 
 
@@ -19,9 +21,7 @@ export class VisionComponent implements AfterViewInit {
   // for title end
 
 
-  ngAfterViewInit(): void {
-
-  }
+  
   changetitle() {
     if (!this.showinputtitle) {
     
